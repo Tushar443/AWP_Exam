@@ -19,7 +19,7 @@ function buildLogic(data1){
     let parent= document.querySelector('#parentnode');
     let newElement=parent.children[0].cloneNode(true);
 
-    newElement.children[0].innerHTML=item.email;
+    newElement.children[0].innerHTML=item.first_name;
     newElement.children[1].style.display='none';
     parent.appendChild(newElement);
     }
