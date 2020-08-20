@@ -33,7 +33,7 @@
 
 let xhr=new XMLHttpRequest();
 
-xhr.open('GET','https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=6bd8fa0376f0b5c61d97fc17fa2eccbd');
+xhr.open('GET','https://api.openweathermap.org//2.5/weather?q=mumbai&appid=6bd8fa0376f0b5c61d97fc17fa2eccbd');
 xhr.onload=()=>{
     let data =JSON.parse(xhr.responseText);
     console.log(data);
