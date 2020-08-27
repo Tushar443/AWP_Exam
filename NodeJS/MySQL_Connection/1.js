@@ -16,10 +16,11 @@ DbConnect();
 async function DbConnect(){
 
     let connection = mysql.createConnection(db_config);
- 
-  await connection.connect();
-   console.log('Complete');
-//   await connection.endAsync();
+   let my_query= 'select * from user';
+  await connection.connectAsync();
+  let result=await connection.queryAsync(my_query);
+   console.log(result);
+  await connection.endAsync();
  }
 
 // async function DbConnect(){
