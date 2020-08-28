@@ -11,6 +11,8 @@ app.get('/',(req,res)=>{
         read : 'Successfully',
     })
 });
+
+
 app.get('/about',(req,res)=>{
     let city=req.query.city;
     let username =req.query.username;
