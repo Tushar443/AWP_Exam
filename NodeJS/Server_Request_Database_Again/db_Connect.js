@@ -19,6 +19,7 @@ let addData =async ()=>{
 
 
 
+
 let insertData =async (user)=>{
     let username =user.name;
     let city =user.city;
