@@ -16,7 +16,9 @@ DbConnect();
 async function DbConnect(){
 
     let connection = mysql.createConnection(db_config);
-   let my_query= 'select * from user';
+//    let my_query= 'select * from user';
+//    let my_query='insert into user (My_name,city) values ("Prakash","Mumbai");';
+   my_query= 'select * from user';
   await connection.connectAsync();
   let result=await connection.queryAsync(my_query);
    console.log(result);
