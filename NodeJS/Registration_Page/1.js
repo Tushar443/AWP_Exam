@@ -17,7 +17,7 @@ function registerUserVer12(){
 async function registerUsingPost(){
     let username =document.querySelector('#username').value;
     let city =document.querySelector('#city').value;
-    
+    console.log(username,city);
     let url ="http://localhost:5600/about";
     
     let result ={username,city}
