@@ -1,5 +1,7 @@
 const db = require('./db_connect');
-const app=require('express')();
+const express=require('express');
+const app =express();
+
 const cors = require('cors');
 
 app.use(cors());
@@ -33,7 +35,8 @@ app.post('/about',async (req, res) => {
    await db.insertData(input);
     res.json({
         res: 200,
-        read: 'About POST'
+        read: 'About POST',
+        myData : JSON.stringify(req.body),
     })
 });
 
