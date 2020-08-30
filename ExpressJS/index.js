@@ -5,6 +5,7 @@ const path =require('path');
 app =express();
 
 app.use(express.static(path.join(__dirname,'public')));
+// app.use(express.json);
 
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
@@ -13,9 +14,17 @@ app.get('/',(req,res)=>{
    res.render('Home'); 
 });
 
-app.get('/login',(req,res)=>{
+app.get('/Login',(req,res)=>{
     res.render('Login'); 
  });
+
+ app.post('/login',(req,res)=>{
+    console.log(req.path);
+    res.json({
+       response : 200,
+       message : 'Successful'
+    })
+});
 
  app.get('/signup',(req,res)=>{
     res.render('Signup'); 
