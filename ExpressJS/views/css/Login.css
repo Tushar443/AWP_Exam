@@ -1,0 +1,18 @@
+.my_form{
+    padding: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+.Main_Div{
+    height: 100vh;
+    border: 4px solid red;
+}
+#u_password{
+   color:red;
+   font-weight: bold;
+   font-style: italic;
+}
+#u_error {
+    color:red;
+   font-weight: bold;
+   font-style: italic;
+}
