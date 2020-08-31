@@ -21,7 +21,10 @@ async function registerUsingPost(){
     let url ="http://localhost:5600/about";
     
     let result ={username,city};
-
+/**
+ * Error in below unhandle promise rejection beacause 
+ * fetch return promise so it will store in some variable
+ */
   //  await fetch(url, {
   //       method: "POST",
   //       body: JSON.stringify(result),
