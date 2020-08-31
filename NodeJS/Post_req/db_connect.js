@@ -22,15 +22,11 @@ let insertData = async (user)=>{
     
    await connection.connectAsync();
     let my_Query='insert into user(My_name,city) values (?,?)';
-   await connection.queryAsync(my_Query,[user.username,user.city]);
+ let result=  await connection.queryAsync(my_Query,[user.username,user.city]);
    await connection.endAsync();
    console.log('Connection end');
-   return;
+   return result;
 }
-insertData({
-    username:'stark',
-    city:'ironman',
-})
 module.exports= {readData,insertData};
 
 

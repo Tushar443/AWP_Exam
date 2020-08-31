@@ -20,21 +20,21 @@ async function registerUsingPost(){
     console.log(username,city);
     let url ="http://localhost:5600/about";
     
-    let result ={username,city}
+    let result ={username,city};
 
-    await fetch(url, {
+  //  await fetch(url, {
+  //       method: "POST",
+  //       body: JSON.stringify(result),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     })
+
+      let result1 = await fetch(url,{
         method: "POST",
-        body: JSON.stringify(result),
-        headers: {
-          "Content-Type": "application/json",
+        body:JSON.stringify(result),
+        headers:{
+            'Content-Type':'application/json',
         },
-      });
-
-    // await fetch(url,{
-    //     method: "POST",
-    //     body:JSON.stringify(result),
-    //     headers:{
-    //         'Content-Type':'application/json',
-    //     },
-    // });
+    });
 }
