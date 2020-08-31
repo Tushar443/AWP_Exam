@@ -2,10 +2,10 @@ const express =require('express');
 const { static } = require('express');
 const path =require('path');
 
-app =express();
+app = express();
 
 app.use(express.static(path.join(__dirname,'public')));
- app.use(express.json);
+ app.use(express.json());
 
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
    res.render('Home'); 
 });
 
-app.get('/Login',(req,res)=>{
+app.get('/login',(req,res)=>{
     res.render('Login'); 
  });
 
