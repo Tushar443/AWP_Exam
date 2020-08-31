@@ -21,13 +21,16 @@ let insertData = async (user)=>{
     const connection=mysql.createConnection(db_config); 
     
    await connection.connectAsync();
-    let my_Query='insert into user(My_name,city) values (?,?) ';
-   let result =await connection.queryAsync(my_Query,[user.username,user.city]);
+    let my_Query='insert into user(My_name,city) values (?,?)';
+   await connection.queryAsync(my_Query,[user.username,user.city]);
    await connection.endAsync();
    console.log('Connection end');
-   return result;
+   return;
 }
-
+insertData({
+    username:'stark',
+    city:'ironman',
+})
 module.exports= {readData,insertData};
 
 
