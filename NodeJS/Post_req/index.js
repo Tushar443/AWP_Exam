@@ -31,6 +31,7 @@ app.get('/about', (req, res) => {
 
 app.post('/about',async (req, res) => {
     const input =req.body;
+    console.log(input);
    await db.insertData(input);
     res.json({
         res: 200,

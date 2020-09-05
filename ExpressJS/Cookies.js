@@ -6,9 +6,9 @@ app.use(session({
     secret : "ThunderStrome",
 }));
 app.get('/',(req,res)=>{
-    // res.cookie('name','Thunder',{maxAge : 3600}).send('cookies set');
+     res.cookie('name','Thunder',{maxAge : 3600})
 
-    res.clearCookie('express');
+    // res.clearCookie('express');
     res.send({
         message : "Done"
     })

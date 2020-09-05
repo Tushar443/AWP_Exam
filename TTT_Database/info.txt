@@ -1,0 +1,37 @@
+// var password = 'Tushar';
+// var another ='Tushar';
+// var hash1 =bcrypt.hashSync(another,10);
+// var hash = bcrypt.hashSync(password,10);
+
+//  var boo =bcrypt.compareSync(hash,hash1,function(err , result ){
+//      if (result===true){
+//          console.log('MAtch');
+//      }
+//      else{
+//          console.log('not');
+//      }
+//  });  
+// console.log(boo);                                                                
+
+
+/**  var password = 'Tushar';
+     var hash = bcrypt.hashSync(password,10); //here 10 is salt rounds(n) :- this is cost factor .formula is 2^n here n is 10.
+                                                                            that much rounds take place so that password is that much strong
+    console.log(hash);
+
+    npm install bcrypt.js
+ * import 
+ * var password ='xyz'
+ * var hash =bcrypt(password)
+ * console.log(hash);
+ * output ='aswert4%^&rghuiop*ygfdd#$dwwsdcvbbh';
+ * 
+ * in signup post method
+ * let hash =bcrypt.hashSync(req.body.password,14)
+ * req.body.password =hash;
+*/
+
+
+// var user =[{id : 1 , name:'alex',email: 'alex@gmail.com',password:'1234'},
+// {id : 2 , name:'ironman',email: 'ironman@gmail.com',password:'2345'},
+// {id : 3 , name:'hulk',email: 'hulk@gmail.com',password:'3456'}]
