@@ -12,7 +12,7 @@ let readData = async (user)=>{
     const connection=mysql.createConnection(db_config); 
     
    await connection.connectAsync();
-    let my_Query=`select * from Signup where Username =?`;
+    let my_Query=`select * from user where Username =?`;
    let result =await connection.queryAsync(my_Query,[user.username]);
    
    await connection.endAsync();
@@ -24,7 +24,7 @@ let readDataF = async (user)=>{
    const connection=mysql.createConnection(db_config); 
    
   await connection.connectAsync();
-   let my_Query=`select * from Signup where emailID =?`;
+   let my_Query=`select * from user where emailID =?`;
   let result =await connection.queryAsync(my_Query,[user.emailID]);
   if(result===undefined){
      return 'False';
@@ -45,7 +45,7 @@ let countData=async()=>{
   const connection=mysql.createConnection(db_config); 
     
    await connection.connectAsync();
-    let my_Query=`select count(*) as total from Signup`;
+    let my_Query=`select count(*) as total from user`;
    let result =await connection.queryAsync(my_Query);
 
    await connection.endAsync(); 
@@ -56,7 +56,7 @@ let insertData = async (user)=>{
     const connection=mysql.createConnection(db_config); 
     
    await connection.connectAsync();
-    let my_Query='insert into Signup(emailID,User_Pass,Username) values (?,?,?)';
+    let my_Query='insert into user(emailID,User_Pass,Username) values (?,?,?)';
    let result =await connection.queryAsync(my_Query,[user.emailID,user.User_Pass,user.Username]);
    await connection.endAsync();
    console.log('Insert end ');
@@ -67,7 +67,7 @@ let findData = async (user)=>{
    console.log(user);
    const connection=mysql.createConnection(db_config); 
   await connection.connectAsync();
-   let my_Query='select * from Signup where id =?;';
+   let my_Query='select * from user where id =?;';
   let result =await connection.queryAsync(my_Query,[user]);
   await connection.endAsync();
   console.log(result);
@@ -80,7 +80,7 @@ let updateData = async (user)=>{
    const connection=mysql.createConnection(db_config); 
    console.log(user);
   await connection.connectAsync();
-   let my_Query=`update Signup set User_pass=? where emailID=?;`;
+   let my_Query=`update user set User_pass=? where emailID=?;`;
   let result =await connection.queryAsync(my_Query,[user.password,user.emailID]);
   await connection.endAsync();
   console.log('Update end ');
